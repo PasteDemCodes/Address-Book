@@ -1,0 +1,17 @@
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\bin\Debug\Address Book.exe.config
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\bin\Debug\Address Book.exe
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\bin\Debug\Address Book.pdb
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\MainWindow.g.cs
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\App.g.cs
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address Book_MarkupCompile.cache
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address Book_MarkupCompile.lref
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\MainWindow.baml
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address Book.g.resources
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address_Book.Properties.Resources.resources
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address Book.csproj.GenerateResource.cache
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address Book.csproj.CoreCompileInputs.cache
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address Book.exe
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address Book.pdb
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Birthday.g.cs
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Birthday.baml
+C:\Users\zogdi\Documents\Visual Studio 2017\Projects\Address Book\Address Book\obj\Debug\Address Book.csprojAssemblyReference.cache

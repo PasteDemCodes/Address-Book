@@ -1,0 +1,86 @@
+﻿<Window x:Class="Address_Book.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Address_Book"
+        mc:Ignorable="d"
+        Title="Address Book" Height="600" Width="693.396" WindowStyle="None" ResizeMode="NoResize" Icon="icon_logo.png">
+    <Grid x:Name="Window" HorizontalAlignment="Left" Height="604.151" VerticalAlignment="Top" Width="699.434">
+        <Grid x:Name="Grid_body" HorizontalAlignment="Left" Height="573.471" Margin="0,31.971,-2,-1.291" VerticalAlignment="Top" Width="701.434" Background="#FF191919">
+            <Label x:Name="Label_Add_Contact" Content="Add Contact" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Background="{x:Null}" MouseEnter="Label_Add_Contact_MouseEnter" MouseLeave="Label_Add_Contact_MouseLeave" MouseDown="Label_Add_Contact_MouseDown"/>
+            <Label x:Name="Label_Contacts" Content="Contacts" HorizontalAlignment="Left" Margin="137.333,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Background="{x:Null}" MouseDown="Label_Contacts_MouseDown" MouseEnter="Label_Contacts_MouseEnter" MouseLeave="Label_Contacts_MouseLeave"/>
+            <Grid x:Name="Grid_Contacts" HorizontalAlignment="Left" Height="527.191" Margin="0,46.28,0,0" VerticalAlignment="Top" Width="701.434" Background="#FF282828">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition Width="0*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Button_Edit_Contact" Content="Edit" Grid.Column="2" Margin="212,0,0,27" VerticalAlignment="Bottom" Height="19.96" Click="Button_Edit_Contact_Click" HorizontalAlignment="Left" Width="81.434"/>
+                <Button x:Name="Button_Delete_Contact" Content="Delete" Grid.Column="2" Margin="0,0,249,27" VerticalAlignment="Bottom" Height="19.96" Click="Button_Delete_Contact_Click" HorizontalAlignment="Right" Width="81.434"/>
+                <DataGrid x:Name="dataGrid_Contacts" ItemsSource="{Binding}" Margin="40,192.373,40,67.96" Grid.ColumnSpan="2" FontSize="14" AutoGenerateColumns="False" BorderThickness="2" CanUserAddRows="false" ColumnWidth="*" Grid.Column="1" SelectedIndex="0" SelectionChanged="dataGrid_Contacts_SelectionChanged">
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontWeight"  Value="Bold" />
+                            <Setter Property="HorizontalAlignment" Value="Stretch" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40" />
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="100" />
+                        <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="100"/>
+                        <DataGridTextColumn Header="Phonenumber" Binding="{Binding Phonenumber}" Width="110"/>
+                        <DataGridTextColumn Header="Email" Binding="{Binding Email}" />
+                        <DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                        <DataGridTextColumn Header="Birthday" Binding="{Binding Birthday}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBox x:Name="TextBox_Search" Grid.Column="2" Height="41.07" Margin="161,10,119,0" TextWrapping="Wrap" VerticalAlignment="Top" KeyUp="TextBox_Search_KeyUp" FontSize="16" VerticalContentAlignment="Center"/>
+                <Image x:Name="Image_Search" Grid.Column="2" HorizontalAlignment="Left" Height="40.787" Margin="111.666,10,0,0" VerticalAlignment="Top" Width="44.334" Source="UI Icons/icon_search.png">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="UI Icons/icon_search.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Rectangle x:Name="Rectangle_Image_Frame1" Grid.Column="2" HorizontalAlignment="Left" Height="130" Margin="277,54.07,0,0" VerticalAlignment="Top" Width="146" RadiusX="20" RadiusY="20" StrokeThickness="5" Stroke="#FF282828" d:IsHidden="True"/>
+                <Image x:Name="Image_Contacts" Grid.ColumnSpan="3" Height="110.226" Margin="283,63.57,289.69,0" VerticalAlignment="Top"/>
+            </Grid>
+            <Grid x:Name="Grid_Add_Contact" HorizontalAlignment="Left" Height="527.191" Margin="0,46.28,0,0" VerticalAlignment="Top" Width="701.434" Background="#FF282828" d:IsHidden="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="47*"/>
+                    <ColumnDefinition Width="621*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="Label_Contact_Saved" Content="Contact was saved Successfully." HorizontalAlignment="Left" Margin="150,477.819,150,0" VerticalAlignment="Top" Grid.Column="2" FontSize="14" Foreground="White" Visibility="Hidden"/>
+                <TextBox x:Name="TextBox_Name" Grid.Column="2" HorizontalAlignment="Center" Height="39.598" Margin="74.622,54.787,351.744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195.018" VerticalContentAlignment="Center" FontSize="14" Text="John"/>
+                <Label x:Name="Label_Name" Content="Name" Grid.Column="1" HorizontalAlignment="Left" Margin="5.966,61.727,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="TextBox_Surname" Grid.Column="2" HorizontalAlignment="Center" Height="39.598" Margin="74.622,100.675,351.744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195.018" VerticalContentAlignment="Center" FontSize="14" Text="Johnson"/>
+                <Label x:Name="Label_Surname" Content="Surname" Grid.Column="1" HorizontalAlignment="Left" Margin="5.966,107.615,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="TextBox_Phonenumber" Grid.Column="2" HorizontalAlignment="Center" Height="39.597" Margin="74.622,146.563,351.744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195.018" VerticalContentAlignment="Center" FontSize="14" PreviewTextInput="TextBox_Phonenumber_PreviewTextInput" Text="0123456789"/>
+                <Label x:Name="Label_Phonenumber" Content="Phone" Grid.Column="1" HorizontalAlignment="Left" Margin="5.966,153.503,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="TextBox_Email" Grid.Column="2" HorizontalAlignment="Center" Height="39.597" Margin="74.622,192.451,351.744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195.018" VerticalContentAlignment="Center" FontSize="14" Text="john@johnson.com"/>
+                <Label x:Name="Label_Email" Content="Email" Grid.Column="1" HorizontalAlignment="Left" Margin="5.966,199.391,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="Label_Birthday" Content="Birthday" Grid.Column="1" HorizontalAlignment="Left" Margin="5.966,245.278,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <DatePicker x:Name="DatePicker_Birthday" Grid.Column="2" HorizontalAlignment="Left" Margin="74.622,245.278,0,0" VerticalAlignment="Top" Height="37.561" Width="195.018" BorderBrush="{x:Null}" FontSize="16" SelectedDateFormat="Short"/>
+                <Rectangle x:Name="Rectangle_Image_Frame" Grid.Column="2" HorizontalAlignment="Left" Height="183.781" Margin="389.505,54.787,0,0" VerticalAlignment="Top" Width="181.368" RadiusX="20" RadiusY="20" StrokeThickness="5" Stroke="#FF282828"/>
+                <Image x:Name="Image_Contact" Grid.Column="2" HorizontalAlignment="Left" Height="170.564" Margin="396.283,61.484,0,0" VerticalAlignment="Top" Width="167.806" Stretch="Fill"/>
+                <Button x:Name="Button_Browse_Image" Content="Browse" Grid.Column="2" HorizontalAlignment="Left" Margin="447.14,254.131,0,0" VerticalAlignment="Top" Width="75" Click="Button_Browse_Image_Click" FontSize="14"/>
+                <Button x:Name="Button_Reset" Content="Reset" Grid.Column="2" HorizontalAlignment="Left" Margin="96.658,409.951,0,0" VerticalAlignment="Top" Width="120.769" Height="52.168" FontSize="14" BorderThickness="3,3,1,1" BorderBrush="#FF282828" Click="Button_Reset_Click"/>
+                <Button x:Name="Button_Submit" Content="Submit" Grid.Column="2" HorizontalAlignment="Left" Margin="271.223,409.951,0,0" VerticalAlignment="Top" Width="120.769" Height="52.168" FontSize="14" BorderThickness="3" BorderBrush="#FF282828" Click="Button_Submit_Click"/>
+                <TextBox x:Name="TextBox_Address" Grid.Column="2" HorizontalAlignment="Center" Height="39.598" Margin="74.622,282.839,351.744,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195.018" VerticalContentAlignment="Center" FontSize="14" Text="67th Banker Str"/>
+                <Label x:Name="Label_Address" Content="Address" Grid.Column="1" HorizontalAlignment="Left" Margin="5.966,289.779,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Grid_logo" Margin="0,0,0,572.18" Background="#FF282828">
+            <Image x:Name="Image_logo" HorizontalAlignment="Left" Height="33.971" VerticalAlignment="Top" Width="34.827" Stretch="Fill" Source="icon_logo.png">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="icon_logo.png"/>
+                </Image.OpacityMask>
+            </Image>
+            <Button x:Name="Button_exit" Content="X" HorizontalAlignment="Left" Margin="663.925,4.827,0,0" VerticalAlignment="Top" Width="25.509" Height="23.971" Background="{x:Null}" Foreground="#FF191919" FontSize="14" MouseEnter="Button_exit_MouseEnter" Click="Button_exit_Click"/>
+            <Label x:Name="Label_logo" Content="Address book" HorizontalAlignment="Left" Margin="33.986,0,0,0" VerticalAlignment="Top" Height="31.971" Width="114.242" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        </Grid>
+    </Grid>
+</Window>

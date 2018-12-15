@@ -1,0 +1,8 @@
+0,arianna,Johnson,0123456789,john@johnson.com,02.10.2018,67th Banker Str
+1,John1,Johnson,0123456789,john@johnson.com,01.10.2018,67th Banker Str
+2,John2,Johnson,0123456789,john@johnson.com,10.10.2018,67th Banker Str
+3,John3,Johnson,0123456789,john@johnson.com,12.10.2018,67th Banker Str
+4,John4,Johnson,0123456789,john@johnson.com,06.09.2018,67th Banker Str
+5,John,Johnson,0123456789,john@johnson.com,-,67th Banker Str
+6,John,Johnson,0123456789,john@johnson.com,-,67th Banker Str
+7,John7,Johnson,0123456789,john@johnson.com,-,67th Banker Str
